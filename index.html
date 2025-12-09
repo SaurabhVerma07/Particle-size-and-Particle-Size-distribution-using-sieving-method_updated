@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Size Distribution using Sieveing method</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- container for pharmacy project to wrap all sections -->
+     <div class="container">
+        
+            <!-- Simulation start pop-up -->
+             
+            <!-- <div class="Simulation-start" id="Simulation-start">
+                <div class="start-card">
+        
+                    <h1>Particle Size Distribution Simulation </h1>
+                    <p>The experiment is ready to proceed to determine the particle size and particle size distribution by using the sieving method.
+                         This experiment will help you understand how different sized particles are separated and analyzed using standard sieves.</p>
+                   
+                    <h2>Equipment Required</h2>
+                    <ul>
+                        <li>1. Sieve shaker machine</li>
+                        <li>2. Sieves</li>
+                        <li>3. Petridish</li>
+                        <li>4. Sample container</li>
+                        <li>5. Spatulla</li>
+                    </ul>
+                    <button class="start-btn" id="start-experiment">Start</button>
+                </div> -->
+                <!-- <h4>Procedure</h4>
+                <ol>
+                    <li>1. Take the sample in the sample container.</li>
+                    <li>2. Put the sample container in the sieve shaker machine.</li>
+                    <li>3. Put the sieves in the sieve shaker machine.</li>
+                    <li>4. Put the petridish in the sieve shaker machine.</li>
+                    <li>5. Start the sieve shaker machine.</li>
+                    <li>6. After the sieving is complete, take out the sieves and petridish.</li>
+                    <li>7. Take out the sample from the sample container.</li>
+                </ol>
+                <h4>Observation</h4>
+                <p>The sieves will have the sample powder in them.</p>
+                <p>The petridish will have the sample powder in it.</p>
+                <p>The sample container will be empty.</p>
+                <p>The sample powder in the sieves and petridish will be the same.</p>
+                <p>The sample powder in the sieves and petridish will be the same as the sample powder in the sample container.</p>
+                 -->
+        
+            </div>
+        
+        <!-- Pharmacy Experiment perform -->
+            <div class="main">
+                <div id="Instructions"><p>INSTRUCTIONS: </p>
+                    <h1 id="text"> </h1></div>
+                <div class="language-selector">
+                    <button class="language-btn">🌐English 
+                        <!-- <span class="dropdown-icon">▼</span> -->
+                    </button>
+                        <div class="language-dropdown" id="hidden">
+                            <a href="#" class="language-option active" data-lang="en">English</a>
+                            <a href="#" class="language-option" data-lang="hi">हिंदी (Hindi)</a>
+                        </div>
+                </div>
+                <div class="pharmacy-lab">
+                    <div class="weight_machine">
+                        <h4>Weight Machine</h4>
+                        <button id="On-button">ON</button>
+                        <input type="Display" id="display" >
+                        <button id="Tare-button">Tare</button>
+                    </div>
+                    <div class="Sieve-shaker-machine_basic" >
+                        <div class="shakerbtn"></div> 
+                        <div id="Shakerlight"></div>
+                    </div>
+                    <div class="Sieves"><h4>Sieves</h4></div>
+                    <div class="Lid">
+                        <h4>Lid</h4>
+                    </div>
+                    <div class="ptri-container">
+                        <div class="petridish" ><h4>Petridish</h4></div>
+                        <div id="sample-to-petridish"></div>
+                        <div class="tilted-samplepowder"></div>
+                    </div>
+                    <div class="sample-container"><h4> Sample <br> Container</h4></div>
+                    <div class="sample-powder-cap" id="powder-cap"><h4>Cap</h4></div>
+                  <div class="chemical-container">
+
+                      <div class="spatulla"><h4>Spatulla</h4></div>
+                      <div id="chemical-in-spatulla"></div>
+                  </div>
+                </div>   
+            </div>
+        
+            <div class="Results">
+
+               <div class="graph">
+                   <h1>GRAPH</h1>
+               </div>
+               <div class="calculations">
+                   <h1>CALCULATIONS</h1>
+               </div>
+         </div>
+
+         <!-- Results Card -->
+         <div class="results-overlay" id="resultsOverlay">
+             <div class="results-card">
+                 <div class="results-header">
+                     <h2>🎉 Experiment Completed Successfully!</h2>
+                     <button class="close-btn" id="closeResults">×</button>
+                 </div>
+                 <div class="results-content">
+                     <h3>Particle Size Distribution - Sieving Method</h3>
+
+                     <div class="result-section">
+                         <h4>📊 Experimental Data</h4>
+                         <table class="results-table">
+                             <thead>
+                                 <tr>
+                                     <th>Parameter</th>
+                                     <th>Value</th>
+                                 </tr>
+                             </thead>
+                             <tbody>
+                                 <tr>
+                                     <td>Initial Sample Weight</td>
+                                     <td>100.00 g</td>
+                                 </tr>
+                                 <tr>
+                                     <td>Petridish Weight</td>
+                                     <td>10.00 g</td>
+                                 </tr>
+                                 <tr>
+                                     <td>Sample in Sieves</td>
+                                     <td>100.00 g</td>
+                                 </tr>
+                                 <tr>
+                                     <td>Sieving Duration</td>
+                                     <td>2.5 seconds</td>
+                                 </tr>
+                             </tbody>
+                         </table>
+                     </div>
+
+                     <div class="result-section">
+                         <h4>✅ Steps Completed</h4>
+                         <ul class="steps-list">
+                             <li>✓ Step 1: Weight machine turned on</li>
+                             <li>✓ Step 2: Petridish placed and tared</li>
+                             <li>✓ Step 3: Cap removed from sample container</li>
+                             <li>✓ Step 4: Sample collected using spatula (100g)</li>
+                             <li>✓ Step 5: Petridish returned to original position</li>
+                             <li>✓ Step 6: Sample poured into sieves</li>
+                             <li>✓ Step 7: Lid placed on sieve shaker machine</li>
+                             <li>✓ Step 8: Sieve shaker machine operated successfully</li>
+                         </ul>
+                     </div>
+
+                     <div class="result-section">
+                         <h4>📊 Particle Size Distribution Analysis</h4>
+                         <div class="charts-container">
+                             <div class="chart-wrapper">
+                                 <h5>Particle Size Distribution (Bar Chart)</h5>
+                                 <canvas id="barChart"></canvas>
+                             </div>
+                             <div class="chart-wrapper">
+                                 <h5>Cumulative Distribution (Line Chart)</h5>
+                                 <canvas id="lineChart"></canvas>
+                             </div>
+                         </div>
+
+                         <div class="sieve-data-table">
+                             <h5>Detailed Sieve Analysis</h5>
+                             <table class="results-table">
+                                 <thead>
+                                     <tr>
+                                         <th>Sieve Size (μm)</th>
+                                         <th>Weight Retained (g)</th>
+                                         <th>% Retained</th>
+                                         <th>% Cumulative</th>
+                                     </tr>
+                                 </thead>
+                                 <tbody>
+                                     <tr>
+                                         <td>500</td>
+                                         <td>5.2</td>
+                                         <td>5.2%</td>
+                                         <td>5.2%</td>
+                                     </tr>
+                                     <tr>
+                                         <td>250</td>
+                                         <td>18.5</td>
+                                         <td>18.5%</td>
+                                         <td>23.7%</td>
+                                     </tr>
+                                     <tr>
+                                         <td>125</td>
+                                         <td>35.8</td>
+                                         <td>35.8%</td>
+                                         <td>59.5%</td>
+                                     </tr>
+                                     <tr>
+                                         <td>63</td>
+                                         <td>28.3</td>
+                                         <td>28.3%</td>
+                                         <td>87.8%</td>
+                                     </tr>
+                                     <tr>
+                                         <td>&lt;63 (Pan)</td>
+                                         <td>12.2</td>
+                                         <td>12.2%</td>
+                                         <td>100%</td>
+                                     </tr>
+                                 </tbody>
+                             </table>
+                         </div>
+                     </div>
+
+                     <div class="result-section">
+                         <h4>📝 Observations</h4>
+                         <p>The sample powder has been successfully sieved through the sieve set. The particles have been separated based on their size distribution. The majority of particles (35.8%) fall within the 125μm sieve size, indicating a medium particle size distribution. The cumulative analysis shows that 87.8% of particles are smaller than 63μm, suggesting good powder fineness suitable for pharmaceutical applications.</p>
+                     </div>
+
+                     <div class="result-section">
+                         <h4>🎯 Conclusion</h4>
+                         <p>The particle size distribution experiment using the sieving method has been completed successfully. The analysis reveals a well-distributed particle size range with the median particle size around 125μm. All equipment was properly calibrated and the procedure was followed correctly. The results indicate the powder meets pharmaceutical quality standards for particle size distribution.</p>
+                     </div>
+
+                     <div class="results-actions">
+                         <button class="action-btn restart-btn" id="restartExperiment">🔄 Restart Experiment</button>
+                         <button class="action-btn download-btn" id="downloadResults">📥 Download Report</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+         <script src="script.js"></script>
+</body>
+</html>
